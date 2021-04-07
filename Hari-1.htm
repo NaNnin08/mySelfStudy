@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--w3s dari home sampai color-->
+<html>
+<head>
+<style>
+body {
+	margin-left:100px;
+	margin-right:100px;
+}
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+h1.bayangan {
+  color : rgba(15, 30, 240, 0.829);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black ;
+  font-size: 50px;
+}
+
+div.cobay {
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+  margin:auto;
+  background-color:springgreen;
+  text-align: center;
+}
+
+.clearfix{
+  overflow: auto;
+}
+
+div.kali {
+  padding: 10px;
+  background-color: white;
+}
+
+pre.lok {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%; /*Jika ingin mengubah posisi kotak pakai top atau bottom*/
+  left: 50%; /*Jika ingin mengubah posisi kotak pakai left atau right*/
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%; /*Jika ingin mengubah posisi arrow*/
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+</head>
+
+<body style="background-color:powderblue">
+
+<h1 class="bayangan">My Firs Heading</h1>
+<h1 style="font-size:300%;">My Second Heading</h1>
+<h3 id="C4">My Three Heading</h3>
+<p></p>
+<p title="kok lama;" style="background-color:tomato;">Salam salam salam</p>
+<hr>
+<p style="color:red;">Belajar HTML</p>
+
+<div class="tooltip">Element pre
+  <span class="tooltiptext">Membuat text seperti apa yang dituliskan</span>
+</div>
+
+
+<!-- create pre element-->
+<div class="cobay clearfix">
+  <div class="kali">
+    <p>MY IMMORTAL FROM EVANESCENE</p>
+  </div>
+<pre class="lok">
+
+I'm so tired of being here
+Suppressed by all my childish fears
+And if you have to leave
+I wish that you would just leave
+'Cause your presence still lingers here
+And it won't leave me alone
+
+These wounds won't seem to heal, this pain is just too real
+There's just too much that time cannot erase
+
+When you cried, I'd wipe away all of your tears
+When you'd scream, I'd fight away all of your fears
+And I held your hand through all of these years
+But you still have all of me
+
+You used to captivate me by your resonating light
+Now, I'm bound by the life you left behind
+Your face it haunts my once pleasant dreams
+Your voice it chased away all the sanity in me
+
+These wounds won't seem to heal, this pain is just too real
+There's just too much that time cannot erase
+
+When you cried, I'd wipe away all of your tears
+When you'd scream, I'd fight away all of your fears
+And I held your hand through all of these years
+But you still have all of me
+
+I've tried so hard to tell myself that you're gone
+But though you're still with me, I've been alone all along
+
+When you cried, I'd wipe away all of your tears
+When you'd scream, I'd fight away all of your fears
+And I held your hand through all of these years
+You still have all of me, me, me
+
+</pre>
+</div>
+
+<p><b>This text is bold</b></p>
+<p><strong>This text is important!</strong></p>
+<p><i>This text is italic</i></p>
+<p><em>This text is emphasized</em></p>
+<p>Do not forget to buy <mark style="background-color:red;">milk</mark> today.</p>
+<p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+<p>This is <sub>subscripted</sub> text.</p>
+<p>This is <sup>superscripted</sup> text.</p>
+<a href="C4">Coba-coba</a>
+<a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-2.htm" title="html belajar hari kedua"
+	target="_blank">Hari-2 HTML</a>
+</body>
+</html>

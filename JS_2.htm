@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>Javascript 2</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="menu utama website">
+        <meta name="keywords" content="HTML, CSS, Javascript">
+        <meta name="author" content="Nida Sunandar">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Javascript 2</h1>
+
+        <h3>Math Object</h3>
+        <p id="math"></p>
+        <script>
+            document.getElementById("math").innerHTML = "4.4 dibulatkan = " + Math.round(4.4) +
+            " <br> 4.5 dibulatkan = " + Math.round(4.5);
+        </script>
+        <p id="math2"></p>
+        <script>
+            document.getElementById("math2").innerHTML = "4.4 dibulatkan(menggunakan ceil function) = " 
+            + Math.ceil(4.4) +" <br> 4.5 dibulatkan(menggunakan ceil function) = " + Math.ceil(4.5);
+        </script>
+        <p id="math3"></p>
+        <script>
+            document.getElementById("math3").innerHTML = "4.4 dibulatkan(menggunakan floor function) = " 
+            + Math.floor(4.4) +" <br> 4.5 dibulatkan(menggunakan floor function) = " + Math.floor(4.5);
+        </script>
+        <p id="math4"></p>
+        <script>
+            document.getElementById("math4").innerHTML = "4.4 menggunakan trunc function = " 
+            + Math.trunc(4.4) +" <br> 4.5 menggunakan trunc function = " + Math.trunc(4.5) + 
+            " <br> -4.5 menggunakan trunc function = " + Math.trunc(-4.5);
+        </script>
+        <p id="math5"></p>
+        <script>
+            document.getElementById("math5").innerHTML = "4.4 menggunakan sign function = " 
+            + Math.sign(4.4) +" <br> 0 menggunakan sign function = " + Math.sign(0) + 
+            " <br> -4.5 menggunakan sign function = " + Math.sign(-4.5);
+        </script>
+        <p id="math6"></p>
+        <script>
+            document.getElementById("math6").innerHTML = "Menggunakan random function = " 
+            + Math.random() +" <br> Random function retang (1-9) = " + Math.floor(Math.random() * 10) + 
+            " <br> Random function rentang (1-100) = " + Math.floor(Math.random() * 101);
+        </script>
+        <button onclick="document.getElementById('math6_1').innerHTML = randomF(1,10)">Random</button>
+        <p id="math6_1"></p>
+        <script>
+            function randomF(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+        </script>
+
+        <h3>Boolean, Comparison and Condition</h3>
+        <p id="b1"></p>
+        <script>
+            document.getElementById("b1").innerHTML = "Apakah 9 > 8: " + Boolean(9 > 8);
+        </script>
+        <p id="b2"></p>
+        <script>
+            var x = 5, y = 2;
+            document.getElementById("b2").innerHTML = "Apakah (x < 6 and y > 1) :" + (x < 6 && y > 1);
+        </script>
+        <p>Input your age and click the button:</p>
+        <input id="age" value="18" />
+        <button onclick="myFunction()">Try it</button>
+        <p id="b3"></p>
+        <script>
+        function myFunction() {
+          var age, voteable;
+          age = Number(document.getElementById("age").value);
+          if (isNaN(age)) {
+            voteable = "Input is not a number";
+          } else {
+            voteable = (age < 18) ? "Too young" : "Old enough";
+          }
+          document.getElementById("b3").innerHTML = voteable;
+        }
+        </script>
+        <p>Click the button to get a time-based greeting:</p>
+        <button onclick="myFunction2()">Try it</button>
+        <p id="b4"></p>
+        <script>
+        function myFunction2() {
+          var greeting;
+          var time = new Date().getHours();
+          if (time < 10) {
+            greeting = "Good morning";
+          } else if (time < 20) {
+            greeting = "Good day";
+          } else {
+            greeting = "Good evening";
+          }
+          document.getElementById("b4").innerHTML = greeting;
+        }
+        </script>
+        <p id="b5"></p>
+        <script>
+        var text;
+        switch (new Date().getDay()) {
+          case 6:
+            text = "Today is Saturday";
+            break;
+          case 0:
+            text = "Today is Sunday";
+            break;
+          default:
+            text = "Looking forward to the Weekend";
+        }
+        document.getElementById("b5").innerHTML = text;
+        </script>
+
+        <h3>Looping for, while, break</h3>
+        <p id="l1"></p>
+        <script>
+            var text = "";
+            var i;
+            for (i=0; i < 5; i++) {
+                text += "Loop (menggunakan for) ke-"+ i +"<br>";
+            }   
+            document.getElementById("l1").innerHTML = text;         
+        
+        </script>
+        <p id="l2"></p>
+        <script>
+        var txt = "";
+        var person = {fname:"John", lname:"Doe", age:25}; 
+        var x;
+        for (x in person) {
+          txt += person[x] + " ";
+        }
+        document.getElementById("l2").innerHTML = "Loop (menggunakan for in): " + txt;
+        </script>
+        <p id="l3"></p>
+        <script>
+        var cars = ["BMW", "Volvo", "Mini"];
+        var text = "";
+        
+        for (var x of cars) {
+          text += x + "<br>";
+        }
+        document.getElementById("l3").innerHTML = "Loop (menggunakan for of): " +
+         "<br>" + text;
+        </script>
+        <p id="l4"></p>
+        <script>
+        var language = "JavaScript";
+        var text = "";
+        
+        for (var x of language) {
+          text += x + "<br>";
+        }
+        document.getElementById("l4").innerHTML = "Loop (menggunakan for of) ditipe data string:" +
+        "<br>" + text;
+        </script>
+        <p id="l5"></p>
+        <script>
+        var cars = ["BMW", "Volvo", "Saab", "Ford"];
+        var i = 0;
+        var text = "";
+        while (cars[i]) {
+          text += cars[i] + "<br>";
+          i++;
+        }
+        document.getElementById("l5").innerHTML = "Loop menggunakan while:" +
+        "<br>" + text;
+        </script>
+        <p id="l6"></p>
+        <script>
+        var text = ""
+        var i = 0;
+        
+        do {
+          text += "<br>Looping ke-" + i;
+          i++;
+        }
+        while (i < 10);  
+        
+        document.getElementById("l6").innerHTML = "Loop menggunakan do/while: <br>" + text;
+        </script>
+        <p id="l7"></p>
+        <script>
+        var text = "";
+        var i;
+        for (i = 0; i < 10; i++) {
+          if (i === 3) { break; }
+          text += "Loop ke-" + i + "<br>";
+        }
+        document.getElementById("l7").innerHTML = "Loop menggunakan break: <br>" + text;
+        </script>
+        <p id="l8"></p>
+        <script>
+        var text = "";
+        var i;
+        for (i = 0; i < 10; i++) {
+          if (i === 3) { continue; }
+          text += "Loop ke-" + i + "<br>";
+        }
+        document.getElementById("l8").innerHTML = "Loop menggunakan continue: <br>" + text;
+        </script>
+
+        <h3>Reguler Expressions</h3>
+        <p id="r1"></p>
+        <script>
+            var str = "Visit W3Schools!"; 
+            var n = str.search(/W3Schools/i);
+            document.getElementById("r1").innerHTML = n;
+        </script>
+        <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+        <button onclick="replace1()">Try it</button>
+        <p id="r2">Please visit Microsoft!</p>
+        <script>
+            function replace1() {
+            var str = document.getElementById("r2").innerHTML; 
+            var txt = str.replace(/MicRoSoft/i,"W3Schools");
+            document.getElementById("r2").innerHTML = txt;
+            }
+        </script>
+        <p id="r3"></p>
+        <script>
+        var obj = /e/.exec("The best things in life are free!");
+        document.getElementById("r3").innerHTML =
+        "Found " + obj[0] + " in position " + obj.index + " in the text: " + obj.input;
+        </script>
+
+        <h3>Error - Trown and Catch</h3>
+        <p>Input Number between 5 to 15:</p>
+        <input id="e1" type="text">
+        <button onclick="eR1()">Test Input!</button>
+        <p id="e1_1"></p>
+        <script>
+            function eR1() {
+                var pesan, x;
+                pesan = document.getElementById("e1_1");
+                pesan.innerHTML = "";
+                x = document.getElementById("e1").value;
+                try {
+                    if (x == "") throw "Empty";
+                    if (isNaN(x)) throw "not a number";
+                    x = Number(x);
+                    if (x < 5) throw "too low";
+                    if (x > 15) throw "too high";
+                    if (x >= 5 && x <= 15) throw "Succsess";
+                }
+                catch(err) {
+                    pesan.innerHTML = "Input is " + err;
+                }
+            }
+        </script>
+
+        <h3>Arrow Function</h3>
+        <p id="arrow"></p>
+        <p>This works only if the function has only one statement</p>
+        <script>
+            var hello;
+
+            hello = val => "Hello " + val;
+
+            document.getElementById("arrow").innerHTML = hello("Universe!");
+        </script>    
+        
+        <h3>Class in Javascript</h3>
+        <p id="c1"></p>
+        <script>
+          class Car {
+            constructor(name, year) {
+              this.name = name;
+              this.year = year;
+            }
+            age() {
+              let date = new Date();
+              return date.getFullYear() - this.year;
+            }
+          }
+
+          var myCar = new Car("Ford", 2014);
+          document.getElementById("c1").innerHTML = "Menggunakan Class untuk mengetahui umur Mobil: <br>" +
+          "My car is " + myCar.age() + " years old.";
+        </script>
+
+        
+    </body>
+</html>

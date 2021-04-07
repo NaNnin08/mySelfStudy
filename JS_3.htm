@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>Javascript 3</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="menu utama website">
+        <meta name="keywords" content="HTML, CSS, Javascript">
+        <meta name="author" content="Nida Sunandar">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            function validateFrom() {
+                var x = document.forms["f1"]["f1_1"].value;
+                if (x=="") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Javascript 3</h1>
+
+        <h3>Form Validation and API</h3>
+        <form name="f1" action="/action_page.php" onsubmit="return validateFrom()"
+        method="POST">
+        Name: <input type="text" name="f1_1">
+        <input type="submit" name="Submit">
+        </form><br></br>
+        <input id="f2" type="number" min="100" max="300" required>
+        <button onclick="myFunction()">OK</button>
+        <p>If the number is less than 100 or greater than 300, an error message will be displayed.</p>
+        <p id="f2_2"></p>
+        <script>
+            function myFunction() {
+            var inpObj = document.getElementById("f2");
+            if (!inpObj.checkValidity()) {
+                document.getElementById("f2_2").innerHTML = inpObj.validationMessage;
+            } else {
+            document.getElementById("f2_2").innerHTML = "Input OK";
+            } 
+            } 
+        </script>
+        <p>Enter a number and click OK:</p>
+        <input id="f3" type="number" min="100">
+        <button onclick="lessF()">OK</button>
+        <p>If the number is less than 100 (the input's min attribute), an error message will be displayed.</p>
+        <p id="f3_3"></p>
+        <script>
+            function lessF() {
+            var txt = "";
+            if (document.getElementById("f3").validity.rangeUnderflow) {
+                txt = "Value too small";
+            } else {
+                txt = "Input OK";
+            } 
+            document.getElementById("f3_3").innerHTML = txt;
+            }
+        </script>
+
+        <h3>Object</h3>
+        <p>Creating a Javascript Object</p>
+        <p id="o1"></p>
+        <p id="o2"></p>
+        <p id="o3"></p>
+        <script>
+            var person = {fname:"John",
+            lname:"Wick",
+            addr:"Cimahi",
+            nohp:"lope234", 
+            get lang() {
+                return this.addr.toUpperCase();
+            }      
+            };
+            var x = person;
+            var y, text = "";
+            x.nohp = "089999"; //object value bisa dirubah 
+            x.age = 65; // object can be add 
+            delete x.nohp // object can be delete
+            document.getElementById("o1").innerHTML = person.fname +
+            person.lname + " tinggal di " + person.addr + " age " + person.age;
+
+            //menampilkan object melalui loop
+            for (y in person) {
+                text += person[y] + " ";
+            };
+            document.getElementById("o2").innerHTML = text;
+
+            //menampilkan object melalui JSON.stringfy()
+            var jsperson = JSON.stringify(person);
+            document.getElementById("o3").innerHTML = jsperson;
+        </script>
+        <p>JavaScript Object Constructors</p>
+        <p id="o4"></p>        
+        <script>
+        
+        // Constructor function for Person objects
+        function Person1(first, last, age, eye) {
+          this.firstName = first;
+          this.lastName = last;
+          this.age = age;
+          this.eyeColor = eye;
+          this.name = function() {
+            return this.firstName + " " + this.lastName
+          };
+        }
+        
+        // Create a Person object
+        var myFather = new Person1("John", "Doe", 50, "blue");
+        
+        // Display full name
+        document.getElementById("o4").innerHTML =
+        "My father is " + myFather.name(); 
+        
+        </script>
+
+        <h3>Function</h3>
+        <p>Sum of all arguments:</p>
+        <p id="fc1"></p>
+        <script>
+            function sumAll() {
+            var i;
+            var sum = 0;
+            for(i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+            }
+            document.getElementById("fc1").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
+        </script>
+        <p>Finding the largest number.</p>
+        <p id="fc2"></p>
+        <script>
+            function findMax() {
+            var i;
+            var max = -Infinity;
+            for(i = 0; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                max = arguments[i];
+                }
+            }
+            return max;
+            } 
+            document.getElementById("fc2").innerHTML = findMax(4, 5, 6);
+        </script>
+        <p>Call Function</p>
+        <p id="fc3"></p>
+        <script>
+            var orang = {
+                fullName: function(city, country) {
+                    return this.fnama + " " + this.lnama + "," + city + "-" + country;
+                }
+            }
+            orang1 = {
+                fnama: "Joni",
+                lnama: "Sitohang"
+            };
+            orang2 ={
+                fnama: "Laki",
+                lnama: "Hun"
+            };
+            document.getElementById("fc3").innerHTML = orang.fullName.call(orang1, "Juhi", "Namek") + 
+            " dan " + orang.fullName.call(orang2, "sumen", "jakaya");
+        </script>
+        <p>Apply Function</p>
+        <p id="fc4"></p>
+        <script>
+            document.getElementById("fc4").innerHTML = Math.max.apply(0, [1,2,3,90])
+        </script>
+        <p>Counting with a local variable.</p>
+        <button type="button" onclick="myFc()">Count!</button>
+        <p id="fc5">0</p>
+        <script>
+            var add = (function () {
+            var counter = 0;
+            return function () {counter += 1; return counter;}
+            })();
+            
+            function myFc(){
+            document.getElementById("fc5").innerHTML = add();
+            }
+        </script>
+
+        <h3>Class Javascript</h3>
+        <p id="cl1"></p>
+        <script>
+            class Car {
+                constructor(name){
+                    this.name = name;
+                }
+                static hello(x) {
+                    return "Hello" + x.name
+                }
+            }
+
+            var myCr = new Car("Yamaha");
+            document.getElementById("cl1").innerHTML = Car.hello(myCr);
+        </script>
+
+        <h3>Async</h3>
+        <p>Do a calculation and then display the result.</p>
+        <p id="as1"></p>
+        <script>
+            function myDisplayer(some) {
+            document.getElementById("as1").innerHTML = some;
+            }
+
+            function myCalculator(num1, num2, myCallback) {
+            let sum = num1 + num2;
+            myCallback(sum);
+            }
+
+            myCalculator(5, 15, myDisplayer);
+        </script>
+        <p>Using setInterval() to display the time every second (1000 milliseconds).</p>
+        <h1 id="as2"></h1>
+        <script>
+            setInterval(myFy1, 1000);
+            
+            function myFy1() {
+            let d = new Date();
+            document.getElementById("as2").innerHTML=
+            d.getHours() + ":" +
+            d.getMinutes() + ":" +
+            d.getSeconds();
+            }
+        </script>
+        <h3>HTML DOM</h3>
+        <p onclick="klikSaya(this)" style="color: black;">Kok Lama</p>
+        <script>
+            function klikSaya(obk) {
+                if (obk.style.color == "black") {
+                    obk.style.color = "red";
+                    return;
+                }
+                if (obk.style.color == "red") {
+                    obk.style.color = "black";
+                    return;
+                }
+            }
+        </script>
+        
+    </body>
+</html>

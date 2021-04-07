@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<meta charset="UTF-8">
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+div.center {
+	border: 1px solid gray;
+	padding: 5px;
+	max-width:600px;
+	margin-left: 50px;
+	margin-top: 100px;
+}
+
+.clearfix {
+	overflow: auto;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+}
+
+strong { 
+	display: block;
+}
+
+h1.cen {
+	position: absolute;
+	left: 500px;
+	top: 10px;
+}
+
+div.site {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 80px;
+	border: 3px solid #73AD21;
+}
+
+</style>
+
+<script>
+function removeElement() {
+  document.getElementById("imgbox1").style.display = "none";
+}
+
+function changeVisibility() {
+  document.getElementById("imgbox2").style.visibility = "hidden";
+}
+
+function resetElement() {
+  document.getElementById("imgbox1").style.display = "block";
+  document.getElementById("imgbox2").style.visibility = "visible";
+}
+</script>
+
+</head>
+<body>
+<h1 class="cen">Belajar Web CSS dan HTML</h1>
+
+<div class="center clearfix">
+<h1>Difference between display:none and visiblity: hidden</h1>
+<p><strong>visibility:hidden</strong> Hides the element, but it still takes up space in the layout.</p>
+<p><strong>display:none</strong> Removes the element from the document. It does not take up any space.</p>
+<div class="gallery" id="imgbox1">
+  <div class="desc">Box 1</div>
+  <a target="_blank" href="file:///C:/Users/LordN/Pictures/koala.jpg">
+    <img src="file:///C:/Users/LordN/Pictures/koala.jpg" alt="Italy" width="600" height="400">
+  </a>
+  <button onclick="removeElement()">Remove</button>
+</div>
+<div class="gallery" id="imgbox2">
+  <div class="desc">Box 2</div>
+  <a target="_blank" href="file:///C:/Users/LordN/Pictures/koala.jpg">
+    <img src="file:///C:/Users/LordN/Pictures/koala.jpg" alt="Lights" width="600" height="400">
+  </a>
+  <button onclick="changeVisibility()">Hide</button>
+</div>
+<div class="gallery">
+  <div class="desc">Box 3</div>
+  <a target="_blank" href="file:///C:/Users/LordN/Pictures/koala.jpg">
+    <img src="file:///C:/Users/LordN/Pictures/koala.jpg" alt="Dark" width="600" height="400">
+  </a>
+  <button onclick="resetElement()">Reset All</button>
+</div>
+</div>
+
+<div class="site">
+Hari Ke-6
+</div>
+
+
+</body>
+</html>

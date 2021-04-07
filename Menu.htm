@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.topmenu {
+  height: 7%;
+}
+
+.sidemenu {
+  width: 15%;
+}
+
+.content {
+  width: 75%;
+}
+
+.header {
+  text-align: center;
+  padding: 5px;
+}
+
+.footer {
+  background-color: rgb(2, 1, 1);
+  color: white;
+  padding-right: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+}
+
+.topmenu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(2, 1, 1);
+
+}
+
+.topmenu li {
+  float: left;
+}
+
+.topmenu li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topmenu li a.active {
+  color: white;
+  background-color: #4CAF50;
+}
+
+.topmenu li a:hover:not(.active), .dropdown:hover{
+  background-color: #222;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+#dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #050505;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+#dropdown-content a{
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+#dropdown-content a:hover {background-color: #f1f1f12c;}
+
+.dropdown:hover #dropdown-content {
+  display: block;
+}
+
+.column {
+  float: left;
+  padding: 5px;
+  padding-left: 45px;
+  margin-top: 30px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.sidemenu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  left: 0;
+  top: 50px;
+  overflow: auto;
+  width: 15%;
+  text-align: center;
+}
+
+.sidemenu li a {
+  display: block;
+  padding: 8px;
+  background-color: #eee;
+  text-decoration: none;
+  color: #666;
+}
+
+.sidemenu li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.sidemenu li a.active {
+  background-color: #008CBA;
+  color: white;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #008CBA;
+}
+
+a:hover, a:active {
+	text-decoration: none;
+	color: yellow;
+}
+
+.bawah {
+	line-height: 0;
+}
+</style>
+</head>
+<body>
+
+<ul class="topmenu">
+  <li><a href="#home">Home</a></li>
+  <li style="float:right"><a href="#about" class="active">About</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Course</a>
+    <div id="dropdown-content">
+      <a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-1.htm" target="_blank">Hari Pertama</a>
+      <a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-2.htm" target="_blank">Hari Kedua</a>
+      <a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-3.htm" target="_blank">Hari Ketiga</a>
+      <a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-4.htm" target="_blank">Hari Keempat</a>
+      <a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-5.htm" target="_blank">Hari Kelima</a>
+      <a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-6.htm" target="_blank">Hari Keenam</a>
+    </div>
+  </li>
+</ul>
+
+<div class="clearfix">
+  <div class="column sidemenu">
+    <ul>
+      <li><a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-1.htm" target="_blank">Hari Pertama</a></li>
+      <li><a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-2.htm" target="_blank">Hari Kedua</a></li>
+      <li><a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-3.htm" target="_blank">Hari Ketiga</a></li>
+      <li><a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-4.htm" target="_blank">Hari Keempat</a></li>
+      <li><a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-5.htm" target="_blank">Hari Kelima</a></li>
+      <li><a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-6.htm" target="_blank">Hari Keenam</a></li>
+    </ul>
+  </div>
+
+  <div class="column content">
+    <div class="header">
+      <h1>WEB LEARNING PROSES</h1>
+    </div>
+    <h2>HTML</h2>
+    <p> Belajar melalui website: <a href="https://www.w3schools.com/" target="_blank">W3school</a> dan menggunakan Notebook++ sebagai tool-nya</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p class="bawah">Menu </p>
+</div>
+
+</body>
+</html>

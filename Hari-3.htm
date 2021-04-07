@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+
+<title>Hari ke 3 Belajar Html</title>
+
+<style>
+.warna{border: 2px solid red;}
+</style>
+
+</head>
+
+<body>
+
+<h1 style="font-size:5vw"> JavaScript </h1>
+<p> Membuat <kbd>tombol</kbd> dengan menampilkan waktu</p>
+
+<button type="button" onclick="document.getElementById('waktu').innerHTML=Date()">
+Click me to display Date and Tome.</button>
+
+<p id="waktu"></p>
+
+<p>JavaScript merubah elemen di website</p>
+
+<button type="button" onclick="myFunction()">Click me master ^_^</button>
+
+<p id="berubah" class="warna">Sebelum Berubah</p>
+
+<script>
+function myFunction() {
+	document.getElementById("berubah").innerHTML = "Setelah Berubah";
+}
+</script>
+
+<p>merubah objek(gambar, dll)</p>
+
+<script>
+function roda(as) {
+	var org;
+	if (as == 0) {
+	org="file:///C:/Users/LordN/Pictures/MM/roda.png"
+	}else {
+	org="file:///C:/Users/LordN/Pictures/MM/roda.gif"
+	}
+	document.getElementById('myImage').src=org;
+}
+</script>
+
+<img id="myImage" src="file:///C:/Users/LordN/Pictures/MM/roda.png" alt="roda" style="width:100px;height:100px;" title="Roda">
+
+<p>
+<button type="button" onclick="roda(1)">Bergerak</button>
+<button type="button" onclick="roda(0)">Berhenti</button>
+</p>
+
+<!--jika browser tidak mendukung javascript maka buuat fungsi dengan <noscript> -->
+
+<noscript>Maaf, browser kamu tidak mendukung javascript</noscript>
+
+<p>&#128507; Ini Gunung</p>
+
+
+</body>
+</html>

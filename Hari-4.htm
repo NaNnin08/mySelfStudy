@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ * {
+    box-sizing: border-box;
+}
+
+input:not([type=radio], [type=checkbox], [type=submit], [type=reset]), select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=submit], input[type=reset] {
+  display: block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin: 12px 5px;
+}
+
+input[type=reset] {
+  display: block;
+  background-color: red;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin: 12px 5px;
+}
+
+fieldset {
+    width: 80%;
+    margin-left: 50px;
+    background-color: rgb(216, 214, 240);
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+input[type=reset]:hover {
+  background-color: #b43636;
+}
+
+div {
+    padding: 10px 5px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;                    
+}
+
+.sidemenu {
+  flex: 60%;
+}
+
+.main {
+  flex: 40%;
+}
+
+.main1 {
+  display: none;
+}
+</style>
+<script>
+  function hai() {
+    document.getElementById("main_1").style.display = "block";
+  }
+</script>
+</head>
+<body>
+
+<h1>Membuat Forms alias lembar pendaftaran</h1>
+<p>Contoh setelah ditelaah:</p>
+
+<h2>Forms</h2>
+<div class="row">
+  <div class="sidemenu">
+    <form action="/belajar_dulu.php" autocomplete="on" method="post">
+      <fieldset>
+      <legend>Contoh Forms:</legend>
+      <div>
+          <label for="fname">Nama Depan:</label>
+      </div>
+      <input type="text" id="fname" name="fname" 
+      placeholder="Nama Depan" value="" autofocus>
+      <div>
+          <label for="lname">Nama Belakang:</label>
+      </div>
+      <input type="text" id="lname" name="lname" 
+      placeholder="Nama Belakang" value="">
+      <div>
+        <label for="gndr">Jenis Kelamin:</label> 
+      </div>
+      <select id="gndr" name="gender">
+      <option value="laki2">Laki2</option>
+      <option value="perempuan">Perempuan</option>
+      </select>
+      <div>
+         <label for="pass">Password:</label>
+      </div>
+      <input type="password" id="pass" name="Kata Kunci" 
+      placeholder="password" required>
+      <div>
+          <label>Pendidikan:</label>
+      </div>
+      <input type="radio" id="sma" name="pendidikan" value="sma">
+      <label for="sma">SMA</label><br>
+      <input type="radio" id="smk" name="pendidikan" value="smk">
+      <label for="smk">SMK</label><br>
+      <input type="radio" id="lain" name="pendidikan" value="lain">
+      <label for="lain">Lain2</label><br>
+      <div>
+          <label>Jurusan: </label>
+      </div>
+      <input list="jur" name="jurusan" placeholder="Jurusan">
+      <datalist id="jur">
+      <option value="IPA">
+      <option value="IPS">
+      <option value="BAHASA">
+      </datalist>
+      <div>
+          <label>Jalur Pendaftaran:</label>
+      </div>
+      <input type="checkbox" id="jalur1" name="jalur" value="jalur1">
+      <label for="jalur1">Jalur Raport</label><br>
+      <input type="checkbox" id="jalur2" name="jalur" value="jalur2">
+      <label for="jalur2">Jalur Prestasi</label><br>
+      <input type="checkbox" id="jalur3" name="jalur" value="jalur3">
+      <label for="jalur3">Jalur Nilai Ujian</label><br>
+      <input type="checkbox" id="jalur4" name="jalur" value="jalur4">
+      <label for="jalur4">Jalur Orang Dalam</label><br><br>
+      <label for="ijazah">Select Ijazah: </label>
+      <input type="file" id="ijazah" name="ijazah">
+      <div>
+          <label for="telp">No Telepon: </label>
+      </div>
+      <input type="tel" id="telp" name="telp"
+      placeholder="08xx-xxxx-xxxx" 
+      pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}">
+      <div>
+          <label> Masukan motivasi anda: </label>
+      </div>
+      <textarea name="message"  rows="10" cols="30" placeholder="Motivasi Anda"></textarea>
+      <div>
+          <label for="sek">Universitas Tujuan: </label>
+      </div>
+      <input type="text" id="sek" name="sekolah" value="UNN" disabled><br>
+      <input type="submit" value="Submit" onclick="hai()">
+      <input type="reset">
+      
+      </fieldset>
+      </form>
+  </div>
+
+  <div class="main">
+    <div class="main1" id="main_1">
+      <h2>kok</h2>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+<!-- contoh dari w3s
+    <!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Form</h2>
+<p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+
+<div class="container">
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">First Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Last Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Country</label>
+    </div>
+    <div class="col-75">
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Subject</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
+</div>
+
+</body>
+</html>
+
+-->
+

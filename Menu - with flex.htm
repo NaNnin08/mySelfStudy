@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="in">
+    <head>
+        <title>Menu Utama</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="menu utama website">
+        <meta name="keywords" content="HTML, CSS, Javascript">
+        <meta name="author" content="Nida Sunandar">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin: 0;
+            }
+
+            .header {
+                text-align: center;
+                background-color: rgba(130, 147, 226, 0.877);
+                color: rgba(24, 240, 53, 0.993);
+                padding: 10px;
+            }
+
+            .topmenu {
+                display: flex;
+                background-color: rgb(34, 33, 33);
+            }
+
+            .topmenu a {
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                padding: 14px 16px;
+            }
+
+            .topmenu a:hover {
+                background-color: rgba(209, 206, 206, 0.747);
+                color: black;
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .sidemenu {
+                flex: 10%;
+                display: flex;
+                flex-direction: column;
+                background-color: darkgray;
+            }
+           
+            .sidemenu a {
+                color :black;
+                text-align: center;
+                text-decoration: none;
+                padding: 10px 0;
+            }
+
+            .sidemenu a:hover {
+                background-color: rgba(34, 29, 29, 0.747);
+                color: rgb(230, 217, 217);
+            }
+
+            .main {
+                flex: 80%;
+                background-color: rgb(230, 221, 221);
+                padding: 20px;
+                margin-left: 10px;
+            }
+
+            .footer {
+                background-color:  rgb(34, 33, 33);
+                color: rgb(241, 241, 241);
+                padding: 10px;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+
+            .active {
+                color: white;
+                background-color: #4CAF50;
+            }
+
+            .dropdown {
+                display: inline-block;
+            }
+
+            #dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #050505;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            #dropdown-content a{
+                color: rgb(255, 255, 255);
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown:hover #dropdown-content {
+                display: block;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Belajar Web Maker</h1>
+            <p>Contoh Pembuatan Menu Menggunakan Flexbox</p>
+        </div>
+
+        <div class="topmenu">
+            <a href="#home">Home</a>
+            <a href="#about" class="active">About</a>
+        </div>
+
+        <div class="row">
+            <div class="sidemenu">
+                <h3> Course</h3>
+                <a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-1.htm" target="_blank">Hari Pertama</a>
+                <a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-2.htm" target="_blank">Hari Kedua</a>
+                <a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-3.htm" target="_blank">Hari Ketiga</a>
+                <a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-4.htm" target="_blank">Hari Keempat</a>
+                <a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-5.htm" target="_blank">Hari Kelima</a>
+                <a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-6.htm" target="_blank">Hari Keenam</a>
+            </div>
+            <div class="main">
+                <h2>Coba</h2>
+            </div>
+        </div>
+
+        <div class="footer">
+            Kok
+        </div>
+
+
+    </body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+		background-image:url('file:///C:/Users/LordN/Pictures/koala.jpg'), url('file:///C:/Users/LordN/Pictures/MM/roda.png');
+		background-repeat:no-repeat, no-repeat;
+		background-position:right top, left bottom;
+		background-attachment:fixed; /*atau bisa juga pakai scroll*/
+    background-origin: padding-box;
+}
+/*Atau bisa juga ditulis 
+body {background: powderblue url('file:///C:/Users/LordN/Pictures/koala.jpg') no-repeat fixed right top}
+
+When using the shorthand property the order of the property values is:
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+*/
+
+.PaLa {color: blue;
+  font-family: verdana;
+  font-size: 150%;}
+  
+.KoPi {color:red;
+		font-size:200%;}
+  
+.warna {
+	color:red; 
+	border-left: 10px solid black;
+	background-color:white;
+	width:300px;
+	padding:25px;
+	margin:auto;
+	box-sizing:border-box;
+}
+	
+	
+a:link, a:visited {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+<!--Membuat tabel berwarna -->
+table {
+  width:50%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+#t01 th {
+  background-color: black;
+  color: white;
+}
+
+img.transparan {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+img.ap {
+  width: 300px;
+  height: 300px;
+  transition: width 2s,height 2s, transform 5s;
+}
+
+img.ap:hover {
+  width: 600px;
+  height: 600px;
+  transform: rotate(360deg);
+}
+
+div.list {
+  width: 25%;
+  border: 10px dotted black;
+  padding: 5px;
+  background-color: rgb(220, 238, 59);
+  background-clip: content-box;
+}
+
+div.a {
+  width: 25%;
+  margin-left: 30px;
+  border: 20px double yellowgreen;
+  background-color: thistle;
+}
+
+div.kotak {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border: none;
+  animation: example 10s linear infinite backwards;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+.pagination {
+  display: inline-block;
+  background-color: black;
+}
+
+.pagination a {
+  color: whi;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: rgba(221, 221, 221, 0.295);}
+</style>
+</head>
+
+<body>
+
+<h1 id="PaLa"> Apa yang terjadi setelah <q>makan</q> secara teratur?</h1>
+
+<p class="warna">pada prinsipnya tubuh akan tumbuh dengan sehat</p>
+
+<div class="a">
+<a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-1.htm" title="html belajar hari pertama"
+	target="_blank">
+ Hari-1 HTML</a>
+<p></p>
+<a href="mailto:someone@example.com">Send email</a>
+<p></p>
+<button onclick="document.location='file:///C:/Users/LordN/Documents/Web_learn/Hari-1.htm'">
+HTML Tutorial</button>
+<p></p>
+</div>
+
+<img class="transparan" src="file:///C:/Users/LordN/Pictures/MM/kaget.png" alt="Trulli" style="float:right;" width="500" height="333">
+<p></p>
+
+<a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-1.htm" title="html belajar hari pertama"
+	target="_blank">
+<img class="ap" src="file:///C:/Users/LordN/Pictures/MM/kaget.png" alt="Trulli"">
+</a>
+
+<h2>A Nested List</h2>
+<p class="KoPi">
+<span>Lists</span> can be <span style="color:blue;font-weight:bold">nested</span> (list inside list):
+</p>
+
+<div class="list">
+<ul>
+  <li>Coffee</li>
+  <li>Tea
+    <ul>
+      <li>Black tea</li>
+      <li>Green tea</li>
+    </ul>
+  </li>
+  <li>Milk</li>
+</ul>
+</div>
+
+<h2>Styling Tables</h2>
+
+<table id="t01">
+<caption>Membuat Tabel</caption>
+  <tr>
+    <th style="text-align:center">Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+	<th colspan="2">grade</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+	<td>A</td>
+	<td>B</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+	<td>A</td>
+	<td>B</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+	<td>C</td>
+	<td>A</td>
+  </tr>
+</table>
+
+<h2>Iframe - Target for a Link</h2>
+
+<iframe src="file:///C:/Users/LordN/Pictures/MM/kaget.png" name="iframe_a" height="300px" width="80%" title="Iframe Example"></iframe>
+
+<p><a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-1.htm" target="iframe_a">Klik Disini Kaka</a></p>
+
+<p class="PaLa">When the target attribute of a link matches the name of an iframe, the link will open in the iframe.</p>
+
+<div class="kotak"></div>
+<br>
+
+<div class="pagination">
+  <a href="#">❮</a>
+  <a href="#">❯</a>
+</div>
+</body>
+<html>

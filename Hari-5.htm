@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+<meta charset="UTF-8">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+	background: url('file:///C:/Users/LordN/Pictures/amazing_nasa/42.jpg') no-repeat fixed;
+  background-size: cover;
+  font-size: 100%;
+	font-family: Verdana, sans-serif;
+}
+/* shorthand font:
+		font-style
+		font-variant
+		font-weight
+		font-size/line-height
+		font-family
+	ex: p{
+			font: italic small-caps bold 12px/30px Georgia, serif;
+		}
+*/
+
+div.lol {
+	background-color: #c8cddf;
+  border-radius: 15px;
+	border: 1px solid gray;
+	padding: 8px;
+	width:700px;
+	margin:auto;
+	margin-top:100px;
+  opacity: 0.8;
+}
+
+div.lol p {
+  color: rgb(41, 5, 5);
+  font-weight: bold;
+}
+
+div.loll {
+	background-image: linear-gradient(80deg, red, yellow, green);  /* bisa menggunakan arah seperti to bottom, to bottom right */
+  border-radius: 20px 30px;
+	border: 1px solid gray;
+	padding: 8px;
+	width:700px;
+	margin:auto;
+	margin-top:100px;
+}
+
+h1, h2 { 
+	text-align: center;
+	text-transform: uppercase; /* another text-transform: lowercase capitalize*/
+	color: #4CAF50;
+	font-size: 2em;
+	font-family: Georgia, serif;
+}
+
+p {
+	text-indent: 50px;
+	text-align: justify;
+	letter-spacing: 2px;
+	line-height: 1.5;
+	font-size: 1em;
+}
+
+p.gaya::first-letter {
+	color: rgb(0, 204, 255);
+	font-size: xx-large;
+}
+
+p.gaya::first-line {
+	color: white;
+}
+
+::-moz-selection { /* untuk Firefox */
+	color: red;
+	background: yellow;
+}
+
+::selection {
+	color: red;
+	background: yellow;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #008CBA;
+}
+
+a:hover, a:active {
+	text-decoration: none;
+	color: yellow;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+tr:hover {background-color:#27cea4;}
+
+.col {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid green;
+}
+</style>
+</head>
+<body>
+
+<div class="lol">
+<h1> History of Python Programming Language </h1>
+<p class="col"> The history of the Python programming language dates back to the late 1980s. Python was
+conceived in the late 1980s and its implementation was started in December 1989 by Guido
+van Rossum <a href="file:///C:/Users/LordN/Documents/Web_learn/Hari-1.htm" title="contoh" target="_blank">
+(FIGURE 1.2)</a> at CWI in the Netherlands as a successor to the ABC programming
+language capable of exception handling and interfacing with the Amoeba operating system.
+Van Rossum is Python’s principal author, and his continuing central role in deciding the
+direction of Python is reflected in the title given to him by the Python community. He is the
+“Benevolent Dictator For Life” (BDFL), which means he continues to oversee Python devel-
+opment and retains the final say in disputes or arguments arising within the community.</p>
+</div>
+
+<div class="loll">
+<h2>Responsive Table</h2>
+<p class="gaya">A responsive table will display a horizontal scroll bar if the screen is too 
+small to display the full content. Resize the browser window to see the effect:</p>
+<p>To create a responsive table, add a container element (like div) with <strong>overflow-x:auto</strong> around the table element:</p>
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>Adam</td>
+      <td>Johnson</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+    </tr>
+  </table>
+</div>
+</div>
+
+</body>
+</html>
